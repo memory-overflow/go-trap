@@ -12,9 +12,8 @@ func addSlice2(s []int, x int) []int {
 	return s
 }
 
-func changeSlice(s []int, i, x int) []int {
+func changeSlice(s []int, i, x int) {
 	s[i] = x
-	return s
 }
 
 func main() {
@@ -32,7 +31,7 @@ func main() {
 
 	s3 := make([]int, 5)
 	for i := 0; i < 5; i++ {
-		s2 = changeSlice(s3, i, i)
+		changeSlice(s3, i, i)
 	}
 	fmt.Println("s3: ", s3)
 }

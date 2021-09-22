@@ -15,10 +15,9 @@ func main() {
 	time.Sleep(time.Second)
 
 	for _, n := range nums {
-		number := n
-		go func() {
+		go func(number int) {
 			fmt.Println(number)
-		}()
+		}(n)
 	}
 	time.Sleep(time.Second)
 }
